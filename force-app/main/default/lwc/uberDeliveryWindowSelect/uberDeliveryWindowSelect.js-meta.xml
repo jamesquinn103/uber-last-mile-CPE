@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Uber Delivery Option</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
+        <target>lightningCommunity__Page</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen"
+        configurationEditor="c-uber-delivery-window-select-editor">
+            <property name="deliveryDistanceLimit" type="Integer" label="Uber Delivery Distance Limit (in miles)" 
+                        description="The max number of miles an order can be delivered by Uber from a fulfillment center. If a customer lives further away than this, Uber will not be displayed as an option for them."/>
+            <property name="deliveryWindowOptions" type="String" label="Uber Delivery Window Options" 
+                        description="The available time ranges when the order can be delivered by Uber"/>
+            <property name="deliveryWindowValue" type="String" label="Default Uber Delivery Window" 
+                        description="The default range of time when the order will be delivered by Uber"/>
+            <property name="zipCode" type="String" label="Zip Code" 
+                        description="The postal code of the customer's address (entered by the customer in the Flow screen)"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

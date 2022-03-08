@@ -1,0 +1,35 @@
+<template>
+    <div class="slds-p-around_xx-small">
+        <lightning-slider
+            label="Max distance allowed for Uber delivery"
+            max="30"
+            step="5"
+            value={deliveryDistanceLimit}
+            onchange={handleDeliveryDistanceLimitChange}>
+        </lightning-slider>
+    </div>
+    <div class="slds-p-top_medium">
+        <h2 class="slds-text-heading_medium slds-p-around_xx-small slds-theme_alt-inverse">
+            Delivery Windows
+        </h2>
+    </div>
+    <div class="slds-p-around_xx-small">
+        <lightning-checkbox-group
+            name="deliveryWindowOptions"
+            label="Uber Delivery Window Options"
+            options={deliveryWindowAllOptions}
+            value={deliveryWindowOptions}
+            onchange={handleDeliveryWindowOptionsSelectedChange}>
+        </lightning-checkbox-group>
+    </div>
+    <div class="slds-p-around_xx-small">
+        <lightning-radio-group
+            name="defaultDeliveryWindowRadioGroup"
+            label="Default Uber Delivery Window"
+            options={deliveryWindowAllOptions}
+            value={deliveryWindowValue}
+            type="radio"
+            onchange={handleDefaultDeliveryWindowValueChange}>
+        </lightning-radio-group>
+    </div>
+</template>
