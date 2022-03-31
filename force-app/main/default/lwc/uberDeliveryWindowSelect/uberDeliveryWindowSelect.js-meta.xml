@@ -5,6 +5,7 @@
     <masterLabel>Uber Delivery Option</masterLabel>
     <targets>
         <target>lightning__AppPage</target>
+        <target><target>lightning__RecordPage</target>
         <target>lightning__FlowScreen</target>
         <target>lightningCommunity__Page</target>
     </targets>
